@@ -6,6 +6,7 @@ import Home from './components/Home';
 import CoursesPage from './components/CoursesPage';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
+import ChatBot from './components/ChatBot';
 
 const App: React.FC = () => {
   const [authModal, setAuthModal] = useState<{ isOpen: boolean; view: 'login' | 'signup' }>({
@@ -85,6 +86,8 @@ const App: React.FC = () => {
         initialView={authModal.view}
         onLoginSuccess={handleLoginSuccess}
       />
+      
+      <ChatBot />
     </div>
   );
 };
