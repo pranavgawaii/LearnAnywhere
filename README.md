@@ -5,23 +5,7 @@
   # 🎓 Danges Academy
   ### Internship Project
 
-  <p align="center">
-    <a href="https://react.dev/">
-      <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
-    </a>
-    <a href="https://www.typescriptlang.org/">
-      <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-    </a>
-    <a href="https://tailwindcss.com/">
-      <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-    </a>
-    <a href="https://vitejs.dev/">
-      <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-    </a>
-    <a href="https://www.framer.com/motion/">
-      <img src="https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=blue" alt="Framer Motion" />
-    </a>
-  </p>
+  
 
   <p align="center">
     <b>"Learning Today, Leading Tomorrow."</b>
