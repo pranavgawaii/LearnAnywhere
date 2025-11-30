@@ -6,7 +6,7 @@
 
 ## 📖 About The Project
 
-**Danges Academy** (also known as Definite Success) is a modern educational platform designed to provide students with essential career and life skills through expert-led courses. 
+**Danges Academy** is a modern educational platform designed to provide students with essential career and life skills through expert-led courses. 
 
 This project was developed as part of an **Internship Program**. It showcases a responsive, aesthetically pleasing frontend built with modern web technologies, focusing on user experience, smooth animations, and accessibility.
 
