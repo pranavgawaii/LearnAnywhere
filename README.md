@@ -1,14 +1,150 @@
-# 🎓 Danges Academy - Internship Project
+<div align="center">
+
+  <img src="public/logo.png" alt="Danges Academy Logo" width="100" />
+
+  # 🎓 Danges Academy
+  ### Internship Project
+
+  <p align="center">
+    <a href="https://react.dev/">
+      <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
+    </a>
+    <a href="https://www.typescriptlang.org/">
+      <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+    </a>
+    <a href="https://tailwindcss.com/">
+      <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+    </a>
+    <a href="https://vitejs.dev/">
+      <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+    </a>
+    <a href="https://www.framer.com/motion/">
+      <img src="https://img.shields.io/badge/Framer_Motion-black?style=for-the-badge&logo=framer&logoColor=blue" alt="Framer Motion" />
+    </a>
+  </p>
+
+  <p align="center">
+    <b>"Learning Today, Leading Tomorrow."</b>
+    <br />
+    A modern, responsive educational platform built with the latest web technologies.
+    <br />
+    <br />
+    <a href="#-key-features">View Demo</a>
+    ·
+    <a href="#-getting-started">Report Bug</a>
+    ·
+    <a href="#-contact-information">Request Feature</a>
+  </p>
+</div>
+
+<br />
 
 ![Project Banner](https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop)
 
-> **"Learning Today, Leading Tomorrow."**
-
 ## 📖 About The Project
 
-**Danges Academy** is a modern educational platform designed to provide students with essential career and life skills through expert-led courses. 
+**Danges Academy** is a comprehensive educational platform designed to bridge the gap between academic learning and real-world skills.
 
-This project was developed as part of an **Internship Program**. It showcases a responsive, aesthetically pleasing frontend built with modern web technologies, focusing on user experience, smooth animations, and accessibility.
+This project was meticulously developed as part of an **Internship Program**. It demonstrates a high standard of frontend development, featuring a fully responsive interface, aesthetic design principles, and seamless user interactions.
+
+### 🎯 Objectives
+*   To create a user-friendly interface for students to explore courses.
+*   To implement modern design patterns using Tailwind CSS.
+*   To ensure accessibility and responsiveness across all devices.
+*   To integrate smooth, performance-optimized animations.
+
+## ✨ Key Features
+
+| Feature | Description |
+| :--- | :--- |
+| **🎨 Modern UI/UX** | Sleek, mobile-first design built with Tailwind CSS. |
+| **🌓 Dark/Light Mode** | Seamless theme switching with persistent state. |
+| **✨ Smooth Animations** | Powered by `Framer Motion` for engaging scroll reveals. |
+| **📚 Course Catalog** | Dynamic sections for top-selling and popular courses. |
+| **🔐 Authentication** | Modal-based Login and Signup interface. |
+| **📍 Smart Contact** | Integrated Google Maps and direct navigation links. |
+| **⚡ High Performance** | Optimized build using Vite for lightning-fast load times. |
+
+## 🛠️ Tech Stack
+
+*   **Frontend:** React 19, TypeScript
+*   **Styling:** Tailwind CSS
+*   **Build Tool:** Vite
+*   **Animations:** Framer Motion
+*   **Icons:** Lucide React
+*   **Package Manager:** NPM
+
+## 🚀 Getting Started
+
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+*   Node.js (v16 or higher)
+*   npm
+
+### Installation
+
+1.  **Clone the repo**
+    ```sh
+    git clone https://github.com/pranavgawaii/Danges_Academy.git
+    ```
+2.  **Install NPM packages**
+    ```sh
+    npm install
+    ```
+3.  **Start the development server**
+    ```sh
+    npm run dev
+    ```
+
+## 📂 Project Structure
+
+```bash
+Danges_Academy/
+├── 📁 components/      # Reusable React components
+│   ├── Hero.tsx
+│   ├── Navbar.tsx
+│   └── ...
+├── 📁 public/          # Static assets
+├── 📄 App.tsx          # Main application entry
+├── 📄 tailwind.config.js
+└── 📄 vite.config.ts
+```
+
+## 📍 Contact Information
+
+<div align="center">
+
+**Danges Academy**
+
+📍 **Address**
+<br />
+Baliram Patil High School, Vinayak Housing Society,
+<br />
+Navbharat Housing Society, N 8, Cidco,
+<br />
+Chhatrapati Sambhajinagar, Maharashtra 431003
+
+📞 **Phone**
+<br />
+094222 93688
+
+📧 **Email**
+<br />
+support@definitesuccess.com
+
+</div>
+
+## 👨‍💻 Developer
+
+Developed with ❤️ by **Pranav Gawai** as part of an internship project.
+
+---
+
+<div align="center">
+  <small><i>This project is for educational purposes.</i></small>
+</div>
 
 ## ✨ Key Features
 
@@ -83,7 +219,7 @@ Danges_Academy/
 
 ## 👨‍💻 Developer
 
-Developed by **[Your Name]** as part of an internship project.
+Developed by **Pranav Gawai** as part of an internship project.
 
 ---
 
