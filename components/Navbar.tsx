@@ -117,13 +117,13 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
                 <>
                   <button 
                     onClick={() => onOpenAuth('login')}
-                    className="px-6 py-2.5 rounded-full bg-transparent border-2 border-brand-teal text-brand-teal dark:text-teal-400 font-bold hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-all"
+                    className="px-6 py-2.5 rounded-full text-gray-700 dark:text-gray-200 font-semibold hover:text-brand-teal dark:hover:text-teal-400 hover:bg-teal-50 dark:hover:bg-teal-900/20 transition-all duration-300"
                   >
                     Login
                   </button>
                   <button 
                     onClick={() => onOpenAuth('signup')}
-                    className="px-6 py-2.5 rounded-full bg-brand-teal text-white font-bold hover:bg-teal-600 hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                    className="px-6 py-2.5 rounded-full bg-gradient-to-r from-brand-teal to-teal-500 text-white font-bold shadow-lg shadow-teal-500/20 hover:shadow-teal-500/40 hover:scale-105 transition-all duration-300"
                   >
                     Sign up
                   </button>
