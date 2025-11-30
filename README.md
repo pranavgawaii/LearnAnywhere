@@ -5,8 +5,6 @@
   # 🎓 Danges Academy
   ### Internship Project
 
-  
-
   <p align="center">
     <b>"Learning Today, Leading Tomorrow."</b>
     <br />
