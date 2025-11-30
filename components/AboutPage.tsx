@@ -1,5 +1,13 @@
 import React from 'react';
 import { Award, Users, Globe } from 'lucide-react';
+import { motion } from 'framer-motion';
+
+const campusImages = [
+  "/images/img1.jpg",
+  "/images/img2.jpg",
+  "/images/img3.jpg",
+  "/images/img4.jpg"
+];
 
 const AboutPage: React.FC = () => {
   return (
@@ -45,6 +53,41 @@ const AboutPage: React.FC = () => {
             />
          </div>
        </div>
+
+       {/* Campus Gallery Section */}
+       <div className="mt-24 mb-10 overflow-hidden">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+          Our Learning Environment
+        </h2>
+        
+        <div className="relative w-full py-4">
+          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-white dark:from-slate-950 z-10 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-white dark:from-slate-950 z-10 pointer-events-none" />
+          
+          <motion.div 
+            className="flex gap-6"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ 
+              repeat: Infinity, 
+              ease: "linear", 
+              duration: 30 
+            }}
+          >
+            {[...campusImages, ...campusImages].map((img, index) => (
+              <div 
+                key={index} 
+                className="min-w-[300px] md:min-w-[400px] h-64 md:h-80 rounded-2xl overflow-hidden shadow-lg border-4 border-white dark:border-slate-800 shrink-0"
+              >
+                <img 
+                  src={img} 
+                  alt={`Campus view ${index + 1}`} 
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
 };
