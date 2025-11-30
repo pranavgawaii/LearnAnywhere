@@ -14,13 +14,17 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
-    if (localStorage.getItem('theme') === 'dark' || 
-       (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    // Default to light mode unless explicitly set to dark
+    if (localStorage.getItem('theme') === 'dark') {
       setIsDark(true);
       document.documentElement.classList.add('dark');
     } else {
       setIsDark(false);
       document.documentElement.classList.remove('dark');
+      // Ensure light mode is set if not present
+      if (!localStorage.getItem('theme')) {
+        localStorage.setItem('theme', 'light');
+      }
     }
   }, []);
 
@@ -46,25 +50,22 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
   return (
     <nav className="sticky top-0 z-40 bg-white/90 dark:bg-slate-900/95 backdrop-blur-md border-b border-gray-100 dark:border-slate-800 transition-colors duration-300 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24"> {/* Increased height */}
+        <div className="flex justify-between items-center h-16"> {/* Reduced height to standard size */}
           
           {/* Logo Section */}
           <div 
-            className="flex-shrink-0 flex items-center cursor-pointer py-2"
+            className="flex-shrink-0 flex items-center cursor-pointer py-2 gap-3"
             onClick={() => onNavigate('home')}
           >
              {/* Replaced with a larger container for the logo */}
-            <div className="h-20 w-auto flex items-center justify-center"> 
+            <div className="h-12 w-auto flex items-center justify-center"> 
                <img 
-                src="https://cdn-icons-png.flaticon.com/512/3413/3413535.png" 
+                src="/logo.png" 
                 alt="Definite Success" 
                 className="h-full w-auto object-contain drop-shadow-md hover:scale-105 transition-transform duration-300" 
                />
-               {/* 
-                 NOTE TO USER: Replace the src above with your actual logo URL. 
-                 Example: src="/assets/logo.png" or the base64 string.
-               */}
             </div>
+            <span className="text-xl font-bold text-gray-900 dark:text-white tracking-tight">DANGES ACADEMY</span>
           </div>
 
           {/* Desktop Menu */}

@@ -32,7 +32,7 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white">Call Us</h3>
-                  <p className="text-gray-600 dark:text-gray-400">+91 98765 43210</p>
+                  <p className="text-gray-600 dark:text-gray-400">094222 93688</p>
                 </div>
               </div>
               
@@ -42,7 +42,18 @@ const ContactPage: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white">Visit Us</h3>
-                  <p className="text-gray-600 dark:text-gray-400">123 Education Lane, Knowledge City, India</p>
+                  <p className="text-gray-600 dark:text-gray-400 mb-2">
+                    Baliram Patil High School, Vinayak Housing Society, Navbharat Housing Society, N 8, Cidco, Chhatrapati Sambhajinagar, Maharashtra 431003
+                  </p>
+                  <a 
+                    href="https://maps.app.goo.gl/DpL7oczSKXGm46Ts6" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 mt-2 px-4 py-2 bg-teal-50 dark:bg-teal-900/20 text-brand-teal rounded-lg hover:bg-teal-100 dark:hover:bg-teal-900/40 transition-colors text-sm font-semibold group"
+                  >
+                    <MapPin size={16} className="group-hover:scale-110 transition-transform" />
+                    Get Directions
+                  </a>
                 </div>
               </div>
             </div>
