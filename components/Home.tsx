@@ -4,6 +4,8 @@ import FeatureBar from './FeatureBar';
 import Categories from './Categories';
 import CourseSection from './CourseSection';
 import RevealOnScroll from './RevealOnScroll';
+import Testimonials from './Testimonials';
+import Newsletter from './Newsletter';
 
 interface HomeProps {
   onJoinClick: () => void;
@@ -58,6 +60,14 @@ const Home: React.FC<HomeProps> = ({ onJoinClick, onNavigate, onCourseAccess }) 
            </RevealOnScroll>
          </div>
       </div>
+
+      <RevealOnScroll width="100%" delay={0.1}>
+        <Testimonials />
+      </RevealOnScroll>
+
+      <RevealOnScroll width="100%" delay={0.1}>
+        <Newsletter />
+      </RevealOnScroll>
     </>
   );
 };

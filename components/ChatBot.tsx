@@ -79,6 +79,13 @@ const ChatBot: React.FC = () => {
     return "Thanks for your question! I'm just a demo bot, but our support team would be happy to help you with that. Please contact us directly.";
   };
 
+  const suggestedQuestions = [
+    "What courses do you offer?",
+    "How much do courses cost?",
+    "Where are you located?",
+    "How can I contact support?"
+  ];
+
   return (
     <>
       {/* Floating Button */}
@@ -145,6 +152,26 @@ const ChatBot: React.FC = () => {
                   </div>
                 </div>
               ))}
+              
+              {/* Suggested Questions */}
+              {messages.length === 1 && (
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {suggestedQuestions.map((q, i) => (
+                    <button
+                      key={i}
+                      onClick={() => {
+                        setInputValue(q);
+                        // Optional: auto-send
+                        // handleSendMessage(); 
+                      }}
+                      className="text-xs bg-white dark:bg-slate-800 border border-teal-100 dark:border-slate-700 text-teal-600 dark:text-teal-400 px-3 py-1.5 rounded-full hover:bg-teal-50 dark:hover:bg-slate-700 transition-colors"
+                    >
+                      {q}
+                    </button>
+                  ))}
+                </div>
+              )}
+              
               <div ref={messagesEndRef} />
             </div>
 
