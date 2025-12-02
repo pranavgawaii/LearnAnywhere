@@ -101,10 +101,13 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
             <div className="flex items-center space-x-3 ml-2">
               {isLoggedIn ? (
                  <div className="flex items-center gap-3">
-                    <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 border border-gray-200 dark:border-slate-700">
+                    <button 
+                      onClick={() => onNavigate('dashboard')}
+                      className="flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 hover:bg-gray-200 dark:hover:bg-slate-700 transition-colors"
+                    >
                         <UserIcon size={18} className="text-gray-600 dark:text-gray-300"/>
-                        <span className="text-sm font-semibold text-gray-700 dark:text-gray-200">Student</span>
-                    </div>
+                        <span className="text-sm font-semibold text-gray-700 dark:text-gray-200">Dashboard</span>
+                    </button>
                     <button 
                       onClick={onLogout}
                       className="p-2 text-gray-500 hover:text-red-500 transition-colors"
@@ -172,12 +175,20 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
             <div className="w-full border-t border-gray-100 dark:border-slate-800 my-2"></div>
 
             {isLoggedIn ? (
-               <button 
-                onClick={() => { setIsOpen(false); onLogout(); }}
-                className="w-full px-6 py-3 rounded-full bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 font-bold"
-              >
-                Logout
-              </button>
+              <div className="flex flex-col gap-3 w-full max-w-xs mt-2">
+                 <button 
+                  onClick={() => { setIsOpen(false); onNavigate('dashboard'); }}
+                  className="w-full px-6 py-3 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 font-bold"
+                >
+                  Dashboard
+                </button>
+                 <button 
+                  onClick={() => { setIsOpen(false); onLogout(); }}
+                  className="w-full px-6 py-3 rounded-full bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 font-bold"
+                >
+                  Logout
+                </button>
+              </div>
             ) : (
               <div className="flex flex-col gap-3 w-full max-w-xs mt-2">
                 <button 

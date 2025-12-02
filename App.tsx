@@ -7,6 +7,7 @@ import CoursesPage from './components/CoursesPage';
 import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
 import ChatBot from './components/ChatBot';
+import StudentDashboard from './components/StudentDashboard';
 
 const App: React.FC = () => {
   const [authModal, setAuthModal] = useState<{ isOpen: boolean; view: 'login' | 'signup' }>({
@@ -28,6 +29,7 @@ const App: React.FC = () => {
   const handleLoginSuccess = () => {
     setIsLoggedIn(true);
     closeAuth();
+    setCurrentPage('dashboard');
   };
 
   const handleLogout = () => {
@@ -46,6 +48,8 @@ const App: React.FC = () => {
 
   const renderPage = () => {
     switch (currentPage) {
+      case 'dashboard':
+        return isLoggedIn ? <StudentDashboard /> : <Home onJoinClick={() => openAuth('signup')} onNavigate={setCurrentPage} onCourseAccess={handleCourseAccess} />;
       case 'courses':
         return <CoursesPage onCourseAccess={handleCourseAccess} />;
       case 'contact':
