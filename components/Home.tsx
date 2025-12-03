@@ -6,6 +6,7 @@ import CourseSection from './CourseSection';
 import RevealOnScroll from './RevealOnScroll';
 import Testimonials from './Testimonials';
 import Newsletter from './Newsletter';
+import { courses } from '../data/courses';
 
 interface HomeProps {
   onJoinClick: () => void;
@@ -14,6 +15,10 @@ interface HomeProps {
 }
 
 const Home: React.FC<HomeProps> = ({ onJoinClick, onNavigate, onCourseAccess }) => {
+  // Filter courses for different sections
+  const topSellingCourses = courses.slice(0, 4);
+  const otherCourses = courses.slice(4, 8);
+
   return (
     <>
       <Hero onJoinClick={onJoinClick} />
@@ -35,6 +40,7 @@ const Home: React.FC<HomeProps> = ({ onJoinClick, onNavigate, onCourseAccess }) 
               </>
             }
             bgGray={true}
+            courses={topSellingCourses}
             onAccess={onCourseAccess}
           />
         </RevealOnScroll>
@@ -48,6 +54,7 @@ const Home: React.FC<HomeProps> = ({ onJoinClick, onNavigate, onCourseAccess }) 
             }
             subtitle="Discover courses you like based on topics you are interested in"
             bgGray={false}
+            courses={otherCourses}
             onAccess={onCourseAccess}
           />
         </RevealOnScroll>
