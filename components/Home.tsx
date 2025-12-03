@@ -11,7 +11,7 @@ import { courses } from '../data/courses';
 interface HomeProps {
   onJoinClick: () => void;
   onNavigate: (page: string) => void;
-  onCourseAccess: () => void;
+  onCourseAccess: (id: number) => void;
 }
 
 const Home: React.FC<HomeProps> = ({ onJoinClick, onNavigate, onCourseAccess }) => {

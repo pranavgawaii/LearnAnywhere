@@ -4,7 +4,7 @@ import CourseCard from './CourseCard';
 import { courses } from '../data/courses';
 
 interface CoursesPageProps {
-  onCourseAccess: () => void;
+  onCourseAccess: (id: number) => void;
 }
 
 const CoursesPage: React.FC<CoursesPageProps> = ({ onCourseAccess }) => {

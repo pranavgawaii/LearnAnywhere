@@ -4,14 +4,14 @@ import { CourseItem } from '../types';
 
 interface CourseCardProps {
   course: CourseItem;
-  onAccess: () => void;
+  onAccess: (id: number) => void;
 }
 
 const CourseCard: React.FC<CourseCardProps> = ({ course, onAccess }) => {
   return (
     <div 
       className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 dark:border-slate-700 flex flex-col h-full cursor-pointer"
-      onClick={onAccess}
+      onClick={() => onAccess(course.id)}
     >
       <div className="relative h-48 overflow-hidden">
         <img
@@ -36,7 +36,7 @@ const CourseCard: React.FC<CourseCardProps> = ({ course, onAccess }) => {
         <div className="mt-auto flex items-center justify-between">
            <span className="font-bold text-xl text-gray-900 dark:text-white">{course.price || 'Free'}</span>
            <button 
-             onClick={(e) => { e.stopPropagation(); onAccess(); }}
+             onClick={(e) => { e.stopPropagation(); onAccess(course.id); }}
              className="flex items-center gap-2 text-sm font-bold text-brand-teal hover:text-teal-600 transition-colors bg-teal-50 dark:bg-teal-900/20 px-3 py-1.5 rounded-lg"
            >
              Details <ArrowRight size={16} />

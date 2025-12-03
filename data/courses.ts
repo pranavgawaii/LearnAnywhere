@@ -7,7 +7,14 @@ export const courses: CourseItem[] = [
     students: 120, 
     image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=800&auto=format&fit=crop',
     category: 'Mathematics',
-    price: '₹2999'
+    price: '₹2999',
+    description: 'Master the concepts of Integration with this comprehensive course designed for Class 12 students. Covers indefinite and definite integrals, properties, and applications.',
+    instructor: 'R.K. Sharma',
+    rating: 4.8,
+    duration: '25h 30m',
+    lessons: 42,
+    language: 'English/Hindi',
+    level: 'Intermediate'
   },
   { 
     id: 2, 
@@ -15,7 +22,14 @@ export const courses: CourseItem[] = [
     students: 85, 
     image: 'https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?q=80&w=800&auto=format&fit=crop',
     category: 'Physics',
-    price: '₹3499'
+    price: '₹3499',
+    description: 'Deep dive into Newtonian Mechanics and Thermodynamics. Perfect for JEE/NEET aspirants looking to strengthen their core concepts.',
+    instructor: 'Dr. H.C. Verma (Fan Club)',
+    rating: 4.9,
+    duration: '32h 15m',
+    lessons: 55,
+    language: 'English',
+    level: 'Advanced'
   },
   { 
     id: 3, 
@@ -23,7 +37,14 @@ export const courses: CourseItem[] = [
     students: 200, 
     image: 'https://images.unsplash.com/photo-1603126857599-f6e157fa2fe6?q=80&w=800&auto=format&fit=crop',
     category: 'Chemistry',
-    price: '₹2499'
+    price: '₹2499',
+    description: 'Understand organic reactions, mechanisms, and conversions. Includes detailed notes and practice problems for board exams and competitive tests.',
+    instructor: 'Priya Singh',
+    rating: 4.7,
+    duration: '28h 00m',
+    lessons: 48,
+    language: 'Hindi',
+    level: 'Intermediate'
   },
   { 
     id: 4, 
@@ -31,7 +52,14 @@ export const courses: CourseItem[] = [
     students: 150, 
     image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=800&auto=format&fit=crop',
     category: 'Computer Science',
-    price: '₹1999'
+    price: '₹1999',
+    description: 'Start your coding journey with Python. Learn syntax, data structures, loops, and build your first project.',
+    instructor: 'Rahul Mishra',
+    rating: 4.6,
+    duration: '15h 45m',
+    lessons: 30,
+    language: 'English',
+    level: 'Beginner'
   },
   { 
     id: 5, 
@@ -39,7 +67,14 @@ export const courses: CourseItem[] = [
     students: 320, 
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop',
     category: 'Computer Science',
-    price: '₹4999'
+    price: '₹4999',
+    description: 'The only course you need to become a full-stack web developer. Covers HTML, CSS, JavaScript, React, Node.js, and MongoDB.',
+    instructor: 'Angela Yu',
+    rating: 4.9,
+    duration: '60h 00m',
+    lessons: 120,
+    language: 'English',
+    level: 'All Levels'
   },
   { 
     id: 6, 
@@ -47,7 +82,14 @@ export const courses: CourseItem[] = [
     students: 95, 
     image: 'https://images.unsplash.com/photo-1530026405186-ed1f139313f8?q=80&w=800&auto=format&fit=crop',
     category: 'Biology',
-    price: '₹2199'
+    price: '₹2199',
+    description: 'Explore the fascinating world of Genetics and Evolution. Detailed explanations of Mendelian genetics, DNA structure, and evolutionary theories.',
+    instructor: 'Dr. S.K. Gupta',
+    rating: 4.5,
+    duration: '18h 30m',
+    lessons: 35,
+    language: 'English',
+    level: 'Intermediate'
   },
   { 
     id: 7, 
@@ -55,7 +97,14 @@ export const courses: CourseItem[] = [
     students: 60, 
     image: 'https://images.unsplash.com/photo-1474932430478-367dbb6832c1?q=80&w=800&auto=format&fit=crop',
     category: 'English',
-    price: '₹1499'
+    price: '₹1499',
+    description: 'A journey through the history of English Literature. Analyze famous plays, poems, and novels from different eras.',
+    instructor: 'Prof. Elizabeth',
+    rating: 4.4,
+    duration: '12h 00m',
+    lessons: 20,
+    language: 'English',
+    level: 'Beginner'
   },
   { 
     id: 8, 
@@ -63,6 +112,13 @@ export const courses: CourseItem[] = [
     students: 210, 
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop',
     category: 'Computer Science',
-    price: '₹3999'
+    price: '₹3999',
+    description: 'Crack coding interviews with this DSA course. Covers Arrays, Linked Lists, Trees, Graphs, DP, and more using Java.',
+    instructor: 'Anuj Kumar',
+    rating: 4.8,
+    duration: '45h 00m',
+    lessons: 80,
+    language: 'Hinglish',
+    level: 'Advanced'
   }
 ];

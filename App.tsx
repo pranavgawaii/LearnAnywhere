@@ -8,6 +8,7 @@ import ContactPage from './components/ContactPage';
 import AboutPage from './components/AboutPage';
 import ChatBot from './components/ChatBot';
 import StudentDashboard from './components/StudentDashboard';
+import CourseDetails from './components/CourseDetails';
 
 const App: React.FC = () => {
   const [authModal, setAuthModal] = useState<{ isOpen: boolean; view: 'login' | 'signup' }>({
@@ -17,6 +18,7 @@ const App: React.FC = () => {
   
   const [currentPage, setCurrentPage] = useState<string>('home');
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [selectedCourseId, setSelectedCourseId] = useState<number | null>(null);
 
   const openAuth = (view: 'login' | 'signup') => {
     setAuthModal({ isOpen: true, view });
@@ -37,19 +39,40 @@ const App: React.FC = () => {
     setCurrentPage('home');
   };
 
-  const handleCourseAccess = () => {
-    if (!isLoggedIn) {
-      openAuth('login');
+  const handleCourseAccess = (courseId?: number) => {
+    if (courseId) {
+      setSelectedCourseId(courseId);
+      setCurrentPage('course-details');
+      window.scrollTo(0, 0);
     } else {
-      // Allow access (in a real app, navigate to course details)
-      alert("Welcome to the course! Access granted.");
+      // Fallback if no ID provided (e.g. from generic buttons)
+      setCurrentPage('courses');
+      window.scrollTo(0, 0);
+    }
+  };
+
+  const handleEnroll = () => {
+    if (!isLoggedIn) {
+      openAuth('signup');
+    } else {
+      alert("Successfully enrolled! Check your dashboard.");
+      setCurrentPage('dashboard');
+      window.scrollTo(0, 0);
     }
   };
 
   const renderPage = () => {
     switch (currentPage) {
       case 'dashboard':
-        return isLoggedIn ? <StudentDashboard /> : <Home onJoinClick={() => openAuth('signup')} onNavigate={setCurrentPage} onCourseAccess={handleCourseAccess} />;
+        return isLoggedIn ? <StudentDashboard /> : <Home onJoinClick={() => openAuth('signup')} onNavigate={setCurrentPage} onCourseAccess={() => handleCourseAccess()} />;
+      case 'course-details':
+        return selectedCourseId ? (
+          <CourseDetails 
+            courseId={selectedCourseId} 
+            onBack={() => setCurrentPage('courses')} 
+            onEnroll={handleEnroll}
+          />
+        ) : <CoursesPage onCourseAccess={handleCourseAccess} />;
       case 'courses':
         return <CoursesPage onCourseAccess={handleCourseAccess} />;
       case 'contact':
@@ -62,7 +85,7 @@ const App: React.FC = () => {
           <Home 
             onJoinClick={() => openAuth('signup')}
             onNavigate={setCurrentPage}
-            onCourseAccess={handleCourseAccess}
+            onCourseAccess={() => handleCourseAccess()} // Home generic buttons go to courses page
           />
         );
     }

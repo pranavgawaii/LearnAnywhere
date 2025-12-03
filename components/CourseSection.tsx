@@ -7,7 +7,7 @@ interface CourseSectionProps {
   subtitle?: string;
   bgGray?: boolean;
   courses: CourseItem[];
-  onAccess: () => void;
+  onAccess: (id: number) => void;
 }
 
 const CourseSection: React.FC<CourseSectionProps> = ({ title, subtitle, bgGray, courses, onAccess }) => {

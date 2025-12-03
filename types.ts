@@ -21,4 +21,11 @@ export interface CourseItem {
   image: string;
   category?: string;
   price?: string;
+  description?: string;
+  instructor?: string;
+  rating?: number;
+  duration?: string;
+  lessons?: number;
+  language?: string;
+  level?: string;
 }
