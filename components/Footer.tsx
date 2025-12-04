@@ -9,13 +9,13 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-secondary shadow-lg shadow-indigo-500/20">
-                 <span className="text-white font-bold text-xl">N</span>
+              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-secondary shadow-lg shadow-sky-500/20">
+                 <span className="text-white font-bold text-xl">Z</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white tracking-tight">Nova</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white tracking-tight">Zenith</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-              Ignite your potential with Nova. We provide the tools and community you need to master new skills and shape your future.
+              Reach your peak with Zenith. We provide the tools and community you need to master new skills and shape your future.
             </p>
             <div className="flex gap-4">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (

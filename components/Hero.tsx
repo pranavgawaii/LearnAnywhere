@@ -26,11 +26,11 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-white dark:bg-slate-800 border border-indigo-100 dark:border-slate-700 rounded-full pl-1 pr-4 py-1 shadow-sm hover:shadow-md transition-all duration-300 mx-auto lg:mx-0"
+              className="inline-flex items-center gap-2 bg-white dark:bg-slate-800 border border-sky-100 dark:border-slate-700 rounded-full pl-1 pr-4 py-1 shadow-sm hover:shadow-md transition-all duration-300 mx-auto lg:mx-0"
             >
               <span className="bg-brand-primary text-white text-xs font-bold px-2 py-0.5 rounded-full">NEW</span>
               <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
-                Reimagine education with Nova
+                Reach your peak with Zenith
               </span>
             </motion.div>
 
@@ -63,7 +63,7 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
             >
               <button 
                 onClick={onJoinClick}
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-primary text-white font-bold text-lg shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-primary text-white font-bold text-lg shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Start Learning <ArrowUpRight size={20} />
               </button>

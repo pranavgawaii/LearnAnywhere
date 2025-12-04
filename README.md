@@ -1,12 +1,12 @@
 <div align="center">
 
-  <img src="public/logo.png" alt="Nova Logo" width="100" />
+  <img src="public/logo.png" alt="Zenith Logo" width="100" />
 
-  # 🎓 Nova
+  # 🎓 Zenith
   ### Internship Project
 
   <p align="center">
-    <b>"Ignite Your Future."</b>
+    <b>"Reach Your Peak."</b>
     <br />
     A modern, responsive educational platform built with the latest web technologies.
     <br />
@@ -25,7 +25,7 @@
 
 ## 📖 About The Project
 
-**Nova** is a comprehensive educational platform designed to bridge the gap between academic learning and real-world skills.
+**Zenith** is a comprehensive educational platform designed to bridge the gap between academic learning and real-world skills.
 
 This project was meticulously developed as part of an **Internship Program**. It demonstrates a high standard of frontend development, featuring a fully responsive interface, aesthetic design principles, and seamless user interactions.
 
