@@ -9,13 +9,13 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-teal to-teal-400 shadow-lg shadow-teal-500/20">
-                 <span className="text-white font-bold text-xl">D</span>
+              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-secondary shadow-lg shadow-indigo-500/20">
+                 <span className="text-white font-bold text-xl">N</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white tracking-tight">Definite Success</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white tracking-tight">Nova</h3>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-              Empowering students with the skills and knowledge they need to succeed in their careers and life. Join our community of learners today.
+              Ignite your potential with Nova. We provide the tools and community you need to master new skills and shape your future.
             </p>
             <div className="flex gap-4">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="flex flex-col gap-1">
                   <span className="text-gray-900 dark:text-white font-medium">Email Us</span>
-                  <span className="text-gray-600 dark:text-gray-400 text-sm">support@definitesuccess.com</span>
+                  <span className="text-gray-600 dark:text-gray-400 text-sm">hello@nova.edu</span>
                 </div>
               </li>
             </ul>
@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-gray-100 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 dark:text-gray-500 text-sm text-center md:text-left">
-            © {new Date().getFullYear()} Definite Success. All rights reserved.
+            © {new Date().getFullYear()} Nova Learning. All rights reserved.
           </p>
           <p className="text-gray-500 dark:text-gray-500 text-sm flex items-center gap-1">
             Made with <Heart size={14} className="text-red-500 fill-red-500" /> for students

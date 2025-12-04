@@ -10,24 +10,24 @@ const ContactPage: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
           <div className="space-y-8">
-            <h2 className="text-2xl font-bold text-brand-teal">Contact Information</h2>
+            <h2 className="text-2xl font-bold text-brand-primary">Contact Information</h2>
             <p className="text-gray-600 dark:text-gray-300">
               Have questions? We are here to help you. Reach out to us through any of these channels.
             </p>
             
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-teal-100 dark:bg-teal-900/30 p-3 rounded-full text-brand-teal">
+                <div className="bg-indigo-100 dark:bg-indigo-900/30 p-3 rounded-full text-brand-primary">
                   <Mail size={24} />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white">Email Us</h3>
-                  <p className="text-gray-600 dark:text-gray-400">support@definitesuccess.com</p>
+                  <p className="text-gray-600 dark:text-gray-400">hello@nova.edu</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
-                 <div className="bg-teal-100 dark:bg-teal-900/30 p-3 rounded-full text-brand-teal">
+                 <div className="bg-indigo-100 dark:bg-indigo-900/30 p-3 rounded-full text-brand-primary">
                   <Phone size={24} />
                 </div>
                 <div>
@@ -37,7 +37,7 @@ const ContactPage: React.FC = () => {
               </div>
               
               <div className="flex items-start gap-4">
-                 <div className="bg-teal-100 dark:bg-teal-900/30 p-3 rounded-full text-brand-teal">
+                 <div className="bg-indigo-100 dark:bg-indigo-900/30 p-3 rounded-full text-brand-primary">
                   <MapPin size={24} />
                 </div>
                 <div>

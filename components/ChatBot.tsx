@@ -15,7 +15,7 @@ const ChatBot: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hi there! 👋 Welcome to Definite Success. How can I help you today?",
+      text: "Hi there! 👋 Welcome to Nova. How can I help you today?",
       sender: 'bot',
       timestamp: new Date()
     }
@@ -119,7 +119,7 @@ const ChatBot: React.FC = () => {
                   <MessageCircle size={20} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-sm">Definite Success Assistant</h3>
+                  <h3 className="font-bold text-sm">Nova Assistant</h3>
                   <p className="text-xs text-teal-100 flex items-center gap-1">
                     <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                     Online

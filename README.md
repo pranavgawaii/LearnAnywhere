@@ -1,12 +1,12 @@
 <div align="center">
 
-  <img src="public/logo.png" alt="Definite Success Logo" width="100" />
+  <img src="public/logo.png" alt="Nova Logo" width="100" />
 
-  # 🎓 Definite Success
+  # 🎓 Nova
   ### Internship Project
 
   <p align="center">
-    <b>"Learning Today, Leading Tomorrow."</b>
+    <b>"Ignite Your Future."</b>
     <br />
     A modern, responsive educational platform built with the latest web technologies.
     <br />
@@ -25,7 +25,7 @@
 
 ## 📖 About The Project
 
-**Definite Success** is a comprehensive educational platform designed to bridge the gap between academic learning and real-world skills.
+**Nova** is a comprehensive educational platform designed to bridge the gap between academic learning and real-world skills.
 
 This project was meticulously developed as part of an **Internship Program**. It demonstrates a high standard of frontend development, featuring a fully responsive interface, aesthetic design principles, and seamless user interactions.
 
@@ -70,7 +70,7 @@ To get a local copy up and running, follow these simple steps.
 
 1.  **Clone the repo**
     ```sh
-    git clone https://github.com/pranavgawaii/Definite_Success.git
+    git clone https://github.com/pranavgawaii/Nova.git
     ```
 2.  Install dependencies:
     ```bash
@@ -97,7 +97,7 @@ MIT
 ## 📂 Project Structure
 
 ```bash
-Definite_Success/
+Nova/
 ```
 
 ## 🤝 Contributing
@@ -112,9 +112,9 @@ Contributions are what make the open source community such an amazing place to l
 
 ## 📞 Contact Information
 
-**Definite Success** - [support@definitesuccess.com](mailto:support@definitesuccess.com)
+**Nova** - [hello@nova.edu](mailto:hello@nova.edu)
 
-Project Link: [https://github.com/pranavgawaii/Definite_Success](https://github.com/pranavgawaii/Definite_Success)
+Project Link: [https://github.com/pranavgawaii/Nova](https://github.com/pranavgawaii/Nova)
 ├── 📁 components/      # Reusable React components
 │   ├── Hero.tsx
 │   ├── Navbar.tsx

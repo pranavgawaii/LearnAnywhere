@@ -8,12 +8,12 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-b from-white via-teal-50/30 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 pt-20 pb-20 md:pt-32 md:pb-32 transition-colors duration-300">
+    <section className="relative w-full overflow-hidden bg-gradient-to-b from-brand-light via-white to-brand-light dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 pt-20 pb-20 md:pt-32 md:pb-32 transition-colors duration-300">
       
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-brand-teal/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-brand-primary/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-brand-secondary/10 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -26,11 +26,11 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-full pl-1 pr-4 py-1 shadow-sm hover:shadow-md transition-all duration-300 mx-auto lg:mx-0"
+              className="inline-flex items-center gap-2 bg-white dark:bg-slate-800 border border-indigo-100 dark:border-slate-700 rounded-full pl-1 pr-4 py-1 shadow-sm hover:shadow-md transition-all duration-300 mx-auto lg:mx-0"
             >
-              <span className="bg-brand-teal text-white text-xs font-bold px-2 py-0.5 rounded-full">NEW</span>
+              <span className="bg-brand-primary text-white text-xs font-bold px-2 py-0.5 rounded-full">NEW</span>
               <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
-                Launch your career with our new courses
+                Reimagine education with Nova
               </span>
             </motion.div>
 
@@ -41,8 +41,8 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-gray-900 dark:text-white"
             >
-              Unlock Your <br className="hidden lg:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-teal-400">Potential</span> Today.
+              Ignite Your <br className="hidden lg:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-secondary">Future</span> Today.
             </motion.h1>
 
             <motion.p 
@@ -51,7 +51,7 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Master in-demand skills with our expert-led courses. Join a community of learners and start your journey to success.
+              Join a global community of learners. Master in-demand skills with our expert-led courses and take your career to the next level.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -63,9 +63,9 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
             >
               <button 
                 onClick={onJoinClick}
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-teal text-white font-bold text-lg shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-primary text-white font-bold text-lg shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Get Started <ArrowUpRight size={20} />
+                Start Learning <ArrowUpRight size={20} />
               </button>
               <button 
                 className="w-full sm:w-auto px-8 py-4 rounded-full bg-white dark:bg-slate-800 text-gray-900 dark:text-white font-bold text-lg border border-gray-200 dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all duration-300 flex items-center justify-center gap-2"
@@ -121,7 +121,7 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
                       transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                       className="absolute top-8 left-8 bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-xl flex items-center gap-3"
                    >
-                      <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg text-blue-600 dark:text-blue-400">
+                      <div className="bg-indigo-100 dark:bg-indigo-900/30 p-2 rounded-lg text-brand-primary dark:text-indigo-400">
                         <BookOpen size={24} />
                       </div>
                       <div>
