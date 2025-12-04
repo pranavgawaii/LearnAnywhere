@@ -8,7 +8,7 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Web Developer",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop",
-    content: "The courses at Danges Academy completely transformed my career. The instructors are top-notch and the curriculum is very practical.",
+    content: "The courses at Definite Success completely transformed my career. The instructors are top-notch and the curriculum is very practical.",
     rating: 5
   },
   {

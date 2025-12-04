@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle, ArrowUpRight } from 'lucide-react';
+import { CheckCircle, ArrowUpRight, Play, Star, Users, BookOpen } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface HeroProps {
@@ -8,25 +8,29 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
   return (
-    <section className="relative w-full overflow-hidden bg-gradient-to-br from-white via-cyan-50/30 to-teal-50/50 dark:from-slate-950 dark:via-slate-900 dark:to-teal-950/30 pt-10 pb-16 md:pt-16 md:pb-20 transition-colors duration-300">
+    <section className="relative w-full overflow-hidden bg-gradient-to-b from-white via-teal-50/30 to-white dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 pt-20 pb-20 md:pt-32 md:pb-32 transition-colors duration-300">
+      
+      {/* Background Elements */}
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-brand-teal/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           
           {/* Left Content */}
-          <div className="lg:w-1/2 space-y-7">
+          <div className="lg:w-1/2 space-y-8 text-center lg:text-left">
              {/* Tag */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border border-teal-100 dark:border-teal-800/60 rounded-full pl-2 pr-4 py-1.5 shadow-[0_0_20px_-5px_rgba(20,184,166,0.2)] hover:shadow-[0_0_25px_-5px_rgba(20,184,166,0.4)] transition-all duration-300 group cursor-default"
+              className="inline-flex items-center gap-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-full pl-1 pr-4 py-1 shadow-sm hover:shadow-md transition-all duration-300 mx-auto lg:mx-0"
             >
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-500"></span>
-              </span>
-              <span className="text-xs font-medium text-gray-600 dark:text-gray-300">
-                Get up to <span className="text-teal-600 dark:text-teal-400 font-bold">40% off</span> on first enroll
+              <span className="bg-brand-teal text-white text-xs font-bold px-2 py-0.5 rounded-full">NEW</span>
+              <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
+                Launch your career with our new courses
               </span>
             </motion.div>
 
@@ -35,110 +39,111 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-gray-900 dark:text-white"
+              className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] tracking-tight text-gray-900 dark:text-white"
             >
-              Learning <span className="text-brand-teal">Today,</span><br />
-              Leading <span className="text-brand-teal">Tomorrow.</span>
+              Unlock Your <br className="hidden lg:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-teal-400">Potential</span> Today.
             </motion.h1>
 
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-lg"
+              className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
-              Learn essential career and life skills with our expert-led courses designed for your success.
+              Master in-demand skills with our expert-led courses. Join a community of learners and start your journey to success.
             </motion.p>
 
-            {/* Features Checkmarks */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="flex flex-wrap gap-5 text-gray-700 dark:text-gray-300 font-medium text-sm"
-            >
-              <div className="flex items-center gap-2">
-                <CheckCircle className="text-blue-500 w-4 h-4" />
-                <span>Flexible</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="text-blue-500 w-4 h-4" />
-                <span>Learning Path</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="text-blue-500 w-4 h-4" />
-                <span>Community</span>
-              </div>
-            </motion.div>
-
-            {/* CTA */}
+            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
             >
               <button 
                 onClick={onJoinClick}
-                className="bg-black dark:bg-white text-white dark:text-black px-8 py-3 rounded-xl font-bold text-base hover:bg-gray-800 dark:hover:bg-gray-200 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-teal text-white font-bold text-lg shadow-lg shadow-teal-500/30 hover:shadow-teal-500/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
               >
-                Join For Free
+                Get Started <ArrowUpRight size={20} />
               </button>
+              <button 
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-white dark:bg-slate-800 text-gray-900 dark:text-white font-bold text-lg border border-gray-200 dark:border-slate-700 hover:bg-gray-50 dark:hover:bg-slate-700 transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                <Play size={20} className="fill-current" /> Watch Demo
+              </button>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="pt-8 flex items-center justify-center lg:justify-start gap-8 border-t border-gray-100 dark:border-slate-800"
+            >
+              <div className="flex flex-col">
+                <span className="text-3xl font-bold text-gray-900 dark:text-white">10k+</span>
+                <span className="text-sm text-gray-500 dark:text-gray-400">Active Students</span>
+              </div>
+              <div className="w-px h-10 bg-gray-200 dark:bg-slate-700"></div>
+              <div className="flex flex-col">
+                <span className="text-3xl font-bold text-gray-900 dark:text-white">50+</span>
+                <span className="text-sm text-gray-500 dark:text-gray-400">Expert Courses</span>
+              </div>
+              <div className="w-px h-10 bg-gray-200 dark:bg-slate-700"></div>
+              <div className="flex flex-col">
+                <span className="text-3xl font-bold text-gray-900 dark:text-white">4.9</span>
+                <span className="text-sm text-gray-500 dark:text-gray-400 flex items-center gap-1">
+                  <Star size={14} className="fill-yellow-400 text-yellow-400" /> Rating
+                </span>
+              </div>
             </motion.div>
           </div>
 
           {/* Right Image */}
           <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="lg:w-1/2 relative"
           >
-             {/* Abstract Background Shapes */}
-             <div className="absolute top-10 right-0 w-[500px] h-[500px] bg-blue-100 dark:bg-blue-900/30 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob"></div>
-             <div className="absolute top-10 -left-4 w-[400px] h-[400px] bg-teal-100 dark:bg-teal-900/30 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
-
-             <div className="relative z-10 flex justify-center lg:justify-end">
-                {/* Floating Cards */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
-                  className="absolute top-10 left-0 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-lg z-20 flex items-center gap-3 animate-bounce duration-[3000ms]"
-                >
-                   <div className="bg-cyan-400 p-2 rounded-md text-white">
-                      <ArrowUpRight size={20} />
-                   </div>
-                   <div>
-                     <p className="font-bold text-sm text-gray-800 dark:text-white">50+</p>
-                     <p className="text-xs text-gray-500 dark:text-gray-400">Available courses</p>
-                   </div>
-                </motion.div>
-
-                <motion.div 
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.7 }}
-                  className="absolute top-0 right-10 bg-white dark:bg-slate-800 p-3 rounded-xl shadow-lg z-20 hidden md:block"
-                >
-                   <div className="flex items-center justify-between gap-4 mb-2">
-                     <p className="text-xs text-gray-500 dark:text-gray-400">No of students</p>
-                   </div>
-                   <div className="flex items-end gap-1 h-10">
-                      <div className="w-2 bg-blue-500 h-[60%] rounded-t-sm"></div>
-                      <div className="w-2 bg-green-400 h-[80%] rounded-t-sm"></div>
-                      <div className="w-2 bg-yellow-400 h-[40%] rounded-t-sm"></div>
-                      <div className="w-2 bg-teal-500 h-[100%] rounded-t-sm"></div>
-                   </div>
-                </motion.div>
-
-                {/* Main Student Image */}
-                <div className="bg-gradient-to-b from-blue-200 to-transparent dark:from-slate-700/50 rounded-b-[4rem] rounded-t-full pt-10 px-6 pb-0 overflow-hidden relative border-b-8 border-brand-teal/20">
+             <div className="relative z-10">
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800">
                    <img 
-                    src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Happy Student" 
-                    className="w-full max-w-sm md:max-w-md object-cover relative z-10 drop-shadow-2xl"
-                    style={{maskImage: 'linear-gradient(to bottom, black 90%, transparent 100%)'}}
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop" 
+                    alt="Students learning" 
+                    className="w-full h-auto object-cover"
                    />
+                   
+                   {/* Floating Badge 1 */}
+                   <motion.div 
+                      animate={{ y: [0, -10, 0] }}
+                      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                      className="absolute top-8 left-8 bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-xl flex items-center gap-3"
+                   >
+                      <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg text-blue-600 dark:text-blue-400">
+                        <BookOpen size={24} />
+                      </div>
+                      <div>
+                        <p className="font-bold text-gray-900 dark:text-white">Interactive</p>
+                        <p className="text-xs text-gray-500">Learning</p>
+                      </div>
+                   </motion.div>
+
+                   {/* Floating Badge 2 */}
+                   <motion.div 
+                      animate={{ y: [0, 10, 0] }}
+                      transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                      className="absolute bottom-8 right-8 bg-white dark:bg-slate-900 p-4 rounded-2xl shadow-xl flex items-center gap-3"
+                   >
+                      <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg text-green-600 dark:text-green-400">
+                        <Users size={24} />
+                      </div>
+                      <div>
+                        <p className="font-bold text-gray-900 dark:text-white">Expert</p>
+                        <p className="text-xs text-gray-500">Mentors</p>
+                      </div>
+                   </motion.div>
                 </div>
              </div>
           </motion.div>

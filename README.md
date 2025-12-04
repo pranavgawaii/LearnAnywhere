@@ -1,8 +1,8 @@
 <div align="center">
 
-  <img src="public/logo.png" alt="Danges Academy Logo" width="100" />
+  <img src="public/logo.png" alt="Definite Success Logo" width="100" />
 
-  # 🎓 Danges Academy
+  # 🎓 Definite Success
   ### Internship Project
 
   <p align="center">
@@ -25,7 +25,7 @@
 
 ## 📖 About The Project
 
-**Danges Academy** is a comprehensive educational platform designed to bridge the gap between academic learning and real-world skills.
+**Definite Success** is a comprehensive educational platform designed to bridge the gap between academic learning and real-world skills.
 
 This project was meticulously developed as part of an **Internship Program**. It demonstrates a high standard of frontend development, featuring a fully responsive interface, aesthetic design principles, and seamless user interactions.
 
@@ -70,7 +70,20 @@ To get a local copy up and running, follow these simple steps.
 
 1.  **Clone the repo**
     ```sh
-    git clone https://github.com/pranavgawaii/Danges_Academy.git
+    git clone https://github.com/pranavgawaii/Definite_Success.git
+    ```
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+3.  Run the development server:
+    ```bash
+    npm run dev
+    ```
+
+## 📄 License
+
+MIT
     ```
 2.  **Install NPM packages**
     ```sh
@@ -84,7 +97,24 @@ To get a local copy up and running, follow these simple steps.
 ## 📂 Project Structure
 
 ```bash
-Danges_Academy/
+Definite_Success/
+```
+
+## 🤝 Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1.  Fork the Project
+2.  Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3.  Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4.  Push to the Branch (`git push origin feature/AmazingFeature`)
+5.  Open a Pull Request
+
+## 📞 Contact Information
+
+**Definite Success** - [support@definitesuccess.com](mailto:support@definitesuccess.com)
+
+Project Link: [https://github.com/pranavgawaii/Definite_Success](https://github.com/pranavgawaii/Definite_Success)
 ├── 📁 components/      # Reusable React components
 │   ├── Hero.tsx
 │   ├── Navbar.tsx

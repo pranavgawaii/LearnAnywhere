@@ -4,24 +4,40 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#ffffff" />
-    <title>Definite Success - Learning Today, Leading Tomorrow</title>
-    <meta name="description" content="Learning Today, Leading Tomorrow" />
+    <title>Definite Success | Premium Learning Platform</title>
+    <meta name="description" content="Unlock your potential with expert-led courses. Learning Today, Leading Tomorrow." />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         darkMode: 'class',
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Poppins', 'sans-serif'],
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
             },
             colors: {
               brand: {
-                teal: '#1ABC9C', // Primary green/teal from design
+                teal: '#0F766E', // Darker, more premium teal
+                primary: '#0F766E',
+                secondary: '#CCFBF1',
                 dark: '#0F172A',
-                pink: '#FCE7F3', // Light pink for feature cards
-                light: '#F0FDFA', // Very light teal background
+                accent: '#F59E0B', // Gold/Amber for accents
+                light: '#F8FAFC',
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
               }
             }
           }
