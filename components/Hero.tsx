@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
             >
               <span className="bg-brand-primary text-white text-xs font-bold px-2 py-0.5 rounded-full">NEW</span>
               <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
-                Reach your peak with Zenith
+                Learn from anywhere with LearnAnywhere
               </span>
             </motion.div>
 
