@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="public/logo.png" alt="Definite Success Logo" width="100" />
+
 
   # 🎓 Definite Success
   ### Internship Project
