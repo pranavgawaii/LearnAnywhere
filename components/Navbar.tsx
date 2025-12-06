@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun, User as UserIcon, LogOut, ChevronRight, Globe } from 'lucide-react';
+import { Menu, X, Moon, Sun, User as UserIcon, LogOut, ChevronRight } from 'lucide-react';
 
 interface NavbarProps {
   onOpenAuth: (type: 'login' | 'signup') => void;
@@ -23,10 +23,16 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
   }, []);
 
   useEffect(() => {
-    // Always start with light mode
-    setIsDark(false);
-    document.documentElement.classList.remove('dark');
-    localStorage.setItem('theme', 'light');
+    if (localStorage.getItem('theme') === 'dark') {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
+    } else {
+      setIsDark(false);
+      document.documentElement.classList.remove('dark');
+      if (!localStorage.getItem('theme')) {
+        localStorage.setItem('theme', 'light');
+      }
+    }
   }, []);
 
   const toggleTheme = () => {
@@ -64,11 +70,11 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
             className="flex items-center gap-3 cursor-pointer group"
             onClick={() => onNavigate('home')}
           >
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-secondary shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-300">
-               <Globe className="text-white" size={24} />
+            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-secondary shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform duration-300">
+               <span className="text-white font-bold text-xl">Z</span>
             </div>
             <span className="text-xl font-bold text-gray-900 dark:text-white tracking-tight group-hover:text-brand-primary transition-colors">
-              LearnAnywhere
+              Zenith
             </span>
           </div>
 

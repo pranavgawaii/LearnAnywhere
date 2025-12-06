@@ -10,7 +10,7 @@ interface CourseCardProps {
 const CourseCard: React.FC<CourseCardProps> = ({ course, onAccess }) => {
   return (
     <div 
-      className="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 group border border-gray-100 dark:border-slate-700 flex flex-col h-full cursor-pointer transform hover:-translate-y-1"
+      className="bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group border border-gray-100 dark:border-slate-700 flex flex-col h-full cursor-pointer transform hover:-translate-y-1"
       onClick={() => onAccess(course.id)}
     >
       <div className="relative h-52 overflow-hidden">

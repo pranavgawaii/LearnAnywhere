@@ -12,9 +12,8 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
       
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-brand-primary/20 rounded-full blur-3xl animate-pulse-slow mix-blend-multiply dark:mix-blend-screen"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-brand-secondary/20 rounded-full blur-3xl animate-pulse-slow delay-1000 mix-blend-multiply dark:mix-blend-screen"></div>
-        <div className="absolute top-[40%] left-[40%] w-[300px] h-[300px] bg-brand-accent/20 rounded-full blur-3xl animate-pulse-slow delay-2000 mix-blend-multiply dark:mix-blend-screen"></div>
+        <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-brand-primary/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-brand-secondary/10 rounded-full blur-3xl animate-pulse-slow delay-1000"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -27,11 +26,11 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-white dark:bg-slate-800 border border-indigo-100 dark:border-slate-700 rounded-full pl-1 pr-4 py-1 shadow-sm hover:shadow-md transition-all duration-300 mx-auto lg:mx-0"
+              className="inline-flex items-center gap-2 bg-white dark:bg-slate-800 border border-sky-100 dark:border-slate-700 rounded-full pl-1 pr-4 py-1 shadow-sm hover:shadow-md transition-all duration-300 mx-auto lg:mx-0"
             >
               <span className="bg-brand-primary text-white text-xs font-bold px-2 py-0.5 rounded-full">NEW</span>
               <span className="text-sm font-medium text-gray-600 dark:text-gray-300">
-                Learn from anywhere with LearnAnywhere
+                Reach your peak with Zenith
               </span>
             </motion.div>
 
@@ -64,7 +63,7 @@ const Hero: React.FC<HeroProps> = ({ onJoinClick }) => {
             >
               <button 
                 onClick={onJoinClick}
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-primary text-white font-bold text-lg shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-primary text-white font-bold text-lg shadow-lg shadow-sky-500/30 hover:shadow-sky-500/50 hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 Start Learning <ArrowUpRight size={20} />
               </button>

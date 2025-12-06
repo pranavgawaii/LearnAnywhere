@@ -14,7 +14,7 @@ const AboutPage: React.FC = () => {
     <div className="py-20 bg-white dark:bg-slate-950 min-h-screen">
        <div className="container mx-auto px-4">
          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">About LearnAnywhere</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">About Zenith</h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
               We are dedicated to providing world-class education accessible to everyone, everywhere. 
               Our mission is to empower students with the skills they need to succeed in their careers and life.
