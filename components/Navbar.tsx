@@ -64,7 +64,7 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
             className="flex items-center gap-3 cursor-pointer group"
             onClick={() => onNavigate('home')}
           >
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-secondary shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform duration-300">
+            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-secondary shadow-lg shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-300">
                <Globe className="text-white" size={24} />
             </div>
             <span className="text-xl font-bold text-gray-900 dark:text-white tracking-tight group-hover:text-brand-primary transition-colors">
