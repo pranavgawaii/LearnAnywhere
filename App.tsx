@@ -9,16 +9,19 @@ import AboutPage from './components/AboutPage';
 import ChatBot from './components/ChatBot';
 import StudentDashboard from './components/StudentDashboard';
 import CourseDetails from './components/CourseDetails';
+import { useToast } from './components/Toast';
+import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
   const [authModal, setAuthModal] = useState<{ isOpen: boolean; view: 'login' | 'signup' }>({
     isOpen: false,
     view: 'login'
   });
-  
+
   const [currentPage, setCurrentPage] = useState<string>('home');
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const [selectedCourseId, setSelectedCourseId] = useState<number | null>(null);
+  const { addToast } = useToast();
 
   const openAuth = (view: 'login' | 'signup') => {
     setAuthModal({ isOpen: true, view });
@@ -43,21 +46,19 @@ const App: React.FC = () => {
     if (courseId) {
       setSelectedCourseId(courseId);
       setCurrentPage('course-details');
-      window.scrollTo(0, 0);
     } else {
       // Fallback if no ID provided (e.g. from generic buttons)
       setCurrentPage('courses');
-      window.scrollTo(0, 0);
     }
   };
 
   const handleEnroll = () => {
     if (!isLoggedIn) {
       openAuth('signup');
+      addToast("Please sign up to enroll in courses", "info");
     } else {
-      alert("Successfully enrolled! Check your dashboard.");
+      addToast("Successfully enrolled! Check your dashboard.", "success");
       setCurrentPage('dashboard');
-      window.scrollTo(0, 0);
     }
   };
 
@@ -67,9 +68,9 @@ const App: React.FC = () => {
         return isLoggedIn ? <StudentDashboard /> : <Home onJoinClick={() => openAuth('signup')} onNavigate={setCurrentPage} onCourseAccess={() => handleCourseAccess()} />;
       case 'course-details':
         return selectedCourseId ? (
-          <CourseDetails 
-            courseId={selectedCourseId} 
-            onBack={() => setCurrentPage('courses')} 
+          <CourseDetails
+            courseId={selectedCourseId}
+            onBack={() => setCurrentPage('courses')}
             onEnroll={handleEnroll}
           />
         ) : <CoursesPage onCourseAccess={handleCourseAccess} />;
@@ -82,7 +83,7 @@ const App: React.FC = () => {
       case 'home':
       default:
         return (
-          <Home 
+          <Home
             onJoinClick={() => openAuth('signup')}
             onNavigate={setCurrentPage}
             onCourseAccess={() => handleCourseAccess()} // Home generic buttons go to courses page
@@ -93,27 +94,28 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white dark:bg-slate-950 text-gray-800 dark:text-gray-100 overflow-x-hidden transition-colors duration-300 flex flex-col">
-      <Navbar 
-        onOpenAuth={openAuth} 
+      <ScrollToTop currentPage={currentPage} />
+      <Navbar
+        onOpenAuth={openAuth}
         onNavigate={setCurrentPage}
         currentPage={currentPage}
         isLoggedIn={isLoggedIn}
         onLogout={handleLogout}
       />
-      
+
       <main className="flex-grow">
         {renderPage()}
       </main>
-      
+
       <Footer />
-      
-      <AuthModal 
-        isOpen={authModal.isOpen} 
-        onClose={closeAuth} 
+
+      <AuthModal
+        isOpen={authModal.isOpen}
+        onClose={closeAuth}
         initialView={authModal.view}
         onLoginSuccess={handleLoginSuccess}
       />
-      
+
       <ChatBot />
     </div>
   );

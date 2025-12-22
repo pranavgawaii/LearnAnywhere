@@ -6,26 +6,11 @@
     <meta name="theme-color" content="#ffffff" />
     <title>Definite Success - Learning Today, Leading Tomorrow</title>
     <meta name="description" content="Learning Today, Leading Tomorrow" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Poppins', 'sans-serif'],
-            },
-            colors: {
-              brand: {
-                teal: '#1ABC9C', // Primary green/teal from design
-                dark: '#0F172A',
-                pink: '#FCE7F3', // Light pink for feature cards
-                light: '#F0FDFA', // Very light teal background
-              }
-            }
-          }
-        }
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
       }
     </script>
     <style>
