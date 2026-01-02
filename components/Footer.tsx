@@ -10,12 +10,12 @@ const Footer: React.FC = () => {
           <div className="space-y-6">
             <div className="flex items-center gap-3">
               <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-secondary shadow-lg shadow-sky-500/20">
-                 <span className="text-white font-bold text-xl">Z</span>
+                <span className="text-white font-bold text-xl">Z</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white tracking-tight">Zenith</h3>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white tracking-tight">Lumina</h3>
             </div>
-            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-              Reach your peak with Zenith. We provide the tools and community you need to master new skills and shape your future.
+            <p className="text-gray-500 dark:text-gray-400 text-sm mt-4 leading-relaxed">
+              Reach your peak with Lumina. We provide the tools and community you need to master new skills and shape your future.
             </p>
             <div className="flex gap-4">
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, i) => (
@@ -54,9 +54,9 @@ const Footer: React.FC = () => {
                   <span className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed max-w-xs">
                     Baliram Patil High School, Vinayak Housing Society, Navbharat Housing Society, N 8, Cidco, Chhatrapati Sambhajinagar, Maharashtra 431003
                   </span>
-                  <a 
-                    href="https://maps.app.goo.gl/DpL7oczSKXGm46Ts6" 
-                    target="_blank" 
+                  <a
+                    href="https://maps.app.goo.gl/DpL7oczSKXGm46Ts6"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-brand-teal hover:text-teal-700 dark:hover:text-teal-400 font-semibold text-sm inline-flex items-center gap-1 mt-1"
                   >

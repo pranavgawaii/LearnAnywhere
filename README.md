@@ -1,8 +1,8 @@
 <div align="center">
 
-  <img src="public/logo.png" alt="Zenith Logo" width="100" />
+  <img src="public/logo.png" alt="Lumina Logo" width="100" />
 
-  # 🎓 Zenith
+  # 🎓 Lumina
   ### Internship Project
 
   <p align="center">
@@ -25,7 +25,7 @@
 
 ## 📖 About The Project
 
-**Zenith** is a comprehensive educational platform designed to bridge the gap between academic learning and real-world skills.
+**Lumina** is a comprehensive educational platform designed to bridge the gap between academic learning and real-world skills.
 
 This project was meticulously developed as part of an **Internship Program**. It demonstrates a high standard of frontend development, featuring a fully responsive interface, aesthetic design principles, and seamless user interactions.
 
