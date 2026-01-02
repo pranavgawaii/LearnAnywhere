@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Clock, BookOpen, BarChart, Globe, Star, CheckCircle, PlayCircle, Lock, Share2, Heart } from 'lucide-react';
+import { Clock, BookOpen, BarChart, Globe, Star, CheckCircle, PlayCircle, Lock, Share2, Heart, ChevronDown, ChevronUp, Users, Award } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import { CourseItem } from '../types';
 import { courses } from '../data/courses';
 
@@ -12,6 +14,14 @@ interface CourseDetailsProps {
 const CourseDetails: React.FC<CourseDetailsProps> = ({ courseId, onBack, onEnroll }) => {
   const course = courses.find(c => c.id === courseId);
   const [activeTab, setActiveTab] = useState<'overview' | 'curriculum' | 'instructor'>('overview');
+  const [expandedSections, setExpandedSections] = useState<number[]>([1]);
+
+  const toggleSection = (section: number) => {
+    setExpandedSections(prev =>
+      prev.includes(section) ? prev.filter(s => s !== section) : [...prev, section]
+    );
+  };
+
 
   if (!course) {
     return (
@@ -33,12 +43,12 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({ courseId, onBack, onEnrol
           <button onClick={onBack} className="text-gray-400 hover:text-white mb-6 flex items-center gap-2 text-sm font-medium">
             ← Back to Courses
           </button>
-          
+
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-2/3">
               <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">{course.title}</h1>
               <p className="text-lg text-gray-300 mb-6 max-w-2xl">{course.description}</p>
-              
+
               <div className="flex flex-wrap gap-4 md:gap-8 text-sm text-gray-300 mb-8">
                 <div className="flex items-center gap-2">
                   <Star className="text-yellow-400 fill-yellow-400" size={18} />
@@ -60,9 +70,9 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({ courseId, onBack, onEnrol
               </div>
 
               <div className="flex items-center gap-4">
-                <img 
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop" 
-                  alt={course.instructor} 
+                <img
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=100&auto=format&fit=crop"
+                  alt={course.instructor}
                   className="w-10 h-10 rounded-full border-2 border-white"
                 />
                 <div>
@@ -77,7 +87,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({ courseId, onBack, onEnrol
 
       <div className="container mx-auto px-4 -mt-10 relative z-20">
         <div className="flex flex-col lg:flex-row gap-8">
-          
+
           {/* Main Content */}
           <div className="lg:w-2/3">
             {/* Tabs */}
@@ -86,11 +96,10 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({ courseId, onBack, onEnrol
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab as any)}
-                  className={`px-8 py-4 font-semibold text-sm capitalize whitespace-nowrap border-b-2 transition-colors ${
-                    activeTab === tab 
-                      ? 'border-brand-teal text-brand-teal' 
-                      : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-                  }`}
+                  className={`px-8 py-4 font-semibold text-sm capitalize whitespace-nowrap border-b-2 transition-colors ${activeTab === tab
+                    ? 'border-brand-teal text-brand-teal'
+                    : 'border-transparent text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                    }`}
                 >
                   {tab}
                 </button>
@@ -111,11 +120,11 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({ courseId, onBack, onEnrol
                       ))}
                     </div>
                   </div>
-                  
+
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Description</h3>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
-                      {course.description} This course is designed to take you from beginner to advanced level. 
+                      {course.description} This course is designed to take you from beginner to advanced level.
                       We cover everything you need to know to succeed in this field.
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -132,42 +141,64 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({ courseId, onBack, onEnrol
                     <p className="text-sm text-gray-500 dark:text-gray-400">
                       {course.lessons} Lessons • {course.duration} Total Length
                     </p>
-                    <button className="text-brand-teal text-sm font-bold hover:underline">Expand All Sections</button>
+                    <button
+                      onClick={() => setExpandedSections([1, 2, 3, 4])}
+                      className="text-brand-teal text-sm font-bold hover:underline"
+                    >
+                      Expand All Sections
+                    </button>
                   </div>
-                  
+
                   {[1, 2, 3, 4].map((section) => (
-                    <div key={section} className="border border-gray-200 dark:border-slate-800 rounded-xl overflow-hidden">
-                      <div className="bg-gray-50 dark:bg-slate-800/50 p-4 flex justify-between items-center cursor-pointer hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+                    <div key={section} className="border border-gray-200 dark:border-slate-800 rounded-xl overflow-hidden transition-all duration-300">
+                      <button
+                        onClick={() => toggleSection(section)}
+                        className="w-full bg-gray-50 dark:bg-slate-800/50 p-4 flex justify-between items-center cursor-pointer hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors"
+                      >
                         <div className="flex items-center gap-3">
-                          <span className="font-bold text-gray-900 dark:text-white">Section {section}: Introduction to Module</span>
+                          {expandedSections.includes(section) ? <ChevronUp size={20} className="text-gray-500" /> : <ChevronDown size={20} className="text-gray-500" />}
+                          <span className="font-bold text-gray-900 dark:text-white text-left">Section {section}: Introduction to Module</span>
                         </div>
                         <span className="text-xs text-gray-500">3 Lectures • 45m</span>
-                      </div>
-                      <div className="divide-y divide-gray-100 dark:divide-slate-800">
-                        {[1, 2, 3].map((lecture) => (
-                          <div key={lecture} className="p-4 flex justify-between items-center hover:bg-gray-50 dark:hover:bg-slate-800/30 transition-colors">
-                            <div className="flex items-center gap-3">
-                              <PlayCircle size={16} className="text-gray-400" />
-                              <span className="text-sm text-gray-700 dark:text-gray-300">Lecture {lecture}: Topic Overview</span>
+                      </button>
+                      <AnimatePresence>
+                        {expandedSections.includes(section) && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                            className="bg-white dark:bg-slate-900"
+                          >
+                            <div className="divide-y divide-gray-100 dark:divide-slate-800 border-t border-gray-100 dark:border-slate-800">
+                              {[1, 2, 3].map((lecture) => (
+                                <div key={lecture} className="p-4 pl-12 flex justify-between items-center hover:bg-gray-50 dark:hover:bg-slate-800/30 transition-colors group">
+                                  <div className="flex items-center gap-3">
+                                    <PlayCircle size={16} className="text-gray-400 group-hover:text-brand-teal transition-colors" />
+                                    <span className="text-sm text-gray-700 dark:text-gray-300">Lecture {lecture}: Topic Overview</span>
+                                  </div>
+                                  {section === 1 && lecture === 1 ? (
+                                    <span className="text-xs text-brand-teal font-bold px-2 py-1 bg-brand-teal/10 rounded-full">Preview</span>
+                                  ) : (
+                                    <Lock size={14} className="text-gray-400" />
+                                  )}
+                                </div>
+                              ))}
                             </div>
-                            {section === 1 && lecture === 1 ? (
-                              <span className="text-xs text-brand-teal font-bold">Preview</span>
-                            ) : (
-                              <Lock size={14} className="text-gray-400" />
-                            )}
-                          </div>
-                        ))}
-                      </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   ))}
                 </div>
+
               )}
 
               {activeTab === 'instructor' && (
                 <div className="flex flex-col md:flex-row gap-6">
-                  <img 
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop" 
-                    alt={course.instructor} 
+                  <img
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop"
+                    alt={course.instructor}
                     className="w-24 h-24 rounded-full object-cover"
                   />
                   <div>
@@ -179,7 +210,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({ courseId, onBack, onEnrol
                       <div className="flex items-center gap-1"><PlayCircle size={14} /> 12 Courses</div>
                     </div>
                     <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                      I am passionate about teaching and have over 10 years of experience in the industry. 
+                      I am passionate about teaching and have over 10 years of experience in the industry.
                       My goal is to make complex topics easy to understand for everyone.
                     </p>
                   </div>
@@ -200,7 +231,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({ courseId, onBack, onEnrol
                   </div>
                   <div className="absolute bottom-4 left-0 right-0 text-center text-white font-bold text-sm">Preview this course</div>
                 </div>
-                
+
                 <div className="p-6">
                   <div className="flex items-end gap-3 mb-6">
                     <span className="text-3xl font-bold text-gray-900 dark:text-white">{course.price}</span>
@@ -208,7 +239,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({ courseId, onBack, onEnrol
                     <span className="text-brand-teal font-bold text-sm mb-1">70% off</span>
                   </div>
 
-                  <button 
+                  <button
                     onClick={onEnroll}
                     className="w-full bg-brand-teal text-white font-bold py-3 rounded-xl hover:bg-teal-600 transition-colors shadow-lg shadow-teal-500/20 mb-3"
                   >
