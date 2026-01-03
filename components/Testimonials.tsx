@@ -34,7 +34,7 @@ const Testimonials: React.FC = () => {
     <section className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -42,7 +42,7 @@ const Testimonials: React.FC = () => {
           >
             Testimonials
           </motion.span>
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -51,7 +51,7 @@ const Testimonials: React.FC = () => {
           >
             What Our Students <span className="text-brand-teal">Say</span>
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -70,38 +70,44 @@ const Testimonials: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="bg-gray-50 dark:bg-slate-900 p-8 rounded-2xl relative hover:shadow-lg transition-shadow duration-300 border border-gray-100 dark:border-slate-800"
+              className="bg-white dark:bg-slate-900 p-8 rounded-3xl relative hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-slate-800 hover:border-brand-teal/20 dark:hover:border-brand-teal/30 hover:-translate-y-2 group"
             >
-              <Quote className="absolute top-6 right-6 text-brand-teal/20 w-10 h-10" />
-              
-              <div className="flex items-center gap-1 mb-6">
+              <div className="absolute -top-6 left-8 bg-brand-teal text-white p-3 rounded-2xl shadow-lg shadow-teal-500/20 group-hover:scale-110 transition-transform duration-300">
+                <Quote size={20} fill="currentColor" />
+              </div>
+
+              <div className="mt-6 flex items-center gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <Star 
-                    key={i} 
-                    size={16} 
-                    className={`${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300 dark:text-gray-600'}`} 
+                  <Star
+                    key={i}
+                    size={18}
+                    className={`${i < testimonial.rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-200 dark:text-gray-700'}`}
                   />
                 ))}
               </div>
 
-              <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed italic">
+              <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed text-lg">
                 "{testimonial.content}"
               </p>
 
-              <div className="flex items-center gap-4">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name} 
-                  className="w-12 h-12 rounded-full object-cover border-2 border-brand-teal/20"
-                />
+              <div className="flex items-center gap-4 pt-6 border-t border-gray-50 dark:border-slate-800/50">
+                <div className="relative">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-14 h-14 rounded-full object-cover border-4 border-gray-50 dark:border-slate-800"
+                  />
+                  <div className="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-white dark:border-slate-900"></div>
+                </div>
                 <div>
-                  <h4 className="font-bold text-gray-900 dark:text-white">{testimonial.name}</h4>
-                  <p className="text-sm text-brand-teal">{testimonial.role}</p>
+                  <h4 className="font-bold text-gray-900 dark:text-white text-lg">{testimonial.name}</h4>
+                  <p className="text-sm text-brand-teal font-medium">{testimonial.role}</p>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );
