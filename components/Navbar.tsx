@@ -57,8 +57,8 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
-          ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-lg border-b border-gray-200/50 dark:border-slate-700/50 py-2'
-          : 'bg-transparent py-4'
+        ? 'bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg shadow-lg border-b border-gray-200/50 dark:border-slate-700/50 py-2'
+        : 'bg-transparent py-4'
         }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,15 +66,14 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
 
           {/* Logo Section */}
           <div
-            className="flex items-center gap-3 cursor-pointer group"
+            className="flex items-center gap-2.5 cursor-pointer group"
             onClick={() => onNavigate('home')}
           >
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-primary to-brand-secondary shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform duration-300">
-              <span className="text-white font-bold text-xl">L</span>
+            <div className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-brand-teal text-white shadow-sm shadow-teal-500/20 group-hover:scale-105 transition-transform duration-300">
+              <span className="font-bold text-lg">L</span>
             </div>
-            <span className="text-xl font-bold text-gray-900 dark:text-white tracking-tight group-hover:text-brand-primary transition-colors">
+            <span className="text-lg font-bold text-slate-900 dark:text-white tracking-tight group-hover:text-brand-teal transition-colors">
               Lumina
-
             </span>
           </div>
 
@@ -86,8 +85,8 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
                   key={link.value}
                   onClick={() => onNavigate(link.value)}
                   className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 ${currentPage === link.value
-                      ? 'bg-white dark:bg-slate-700 text-brand-teal shadow-sm'
-                      : 'text-gray-600 dark:text-gray-300 hover:text-brand-teal dark:hover:text-white'
+                    ? 'bg-white dark:bg-slate-700 text-brand-teal shadow-sm'
+                    : 'text-gray-600 dark:text-gray-300 hover:text-brand-teal dark:hover:text-white'
                     }`}
                 >
                   {link.name}
@@ -170,8 +169,8 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
                   key={link.value}
                   onClick={() => { setIsOpen(false); onNavigate(link.value); }}
                   className={`block w-full text-left px-4 py-3 rounded-xl font-medium transition-colors ${currentPage === link.value
-                      ? 'bg-brand-teal/10 text-brand-teal'
-                      : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800'
+                    ? 'bg-brand-teal/10 text-brand-teal'
+                    : 'text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-slate-800'
                     }`}
                 >
                   {link.name}

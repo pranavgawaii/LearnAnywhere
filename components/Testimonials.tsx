@@ -33,7 +33,10 @@ const Testimonials: React.FC = () => {
   return (
     <section className="py-20 bg-white dark:bg-slate-950 transition-colors duration-300 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 relative z-10">
+          {/* Vibrant Backdrop */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-brand-primary/5 rounded-full blur-[80px] -z-10"></div>
+
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

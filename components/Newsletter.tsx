@@ -4,8 +4,11 @@ import { motion } from 'framer-motion';
 
 const Newsletter: React.FC = () => {
   return (
-    <section className="py-24 bg-white dark:bg-slate-950 transition-colors duration-300">
-      <div className="container mx-auto px-4">
+    <section className="py-24 bg-white dark:bg-slate-950 transition-colors duration-300 relative">
+      {/* Vibrant Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}
           whileInView={{ opacity: 1, scale: 1 }}

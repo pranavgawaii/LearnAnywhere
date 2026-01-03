@@ -34,13 +34,13 @@ const Categories: React.FC = () => {
           {categories.map((cat) => (
             <div
               key={cat.id}
-              className="group bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-brand-teal/30 hover:shadow-xl hover:shadow-brand-teal/5 transition-all duration-300 cursor-pointer text-center"
+              className="group bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-brand-teal/30 hover:shadow-2xl hover:shadow-brand-teal/10 transition-all duration-300 cursor-pointer text-center hover:-translate-y-2"
             >
-              <div className="w-16 h-16 mx-auto bg-slate-50 dark:bg-slate-800 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300 text-slate-700 dark:text-slate-300">
+              <div className="w-16 h-16 mx-auto bg-slate-50 dark:bg-slate-800 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-brand-teal group-hover:text-white transition-colors duration-300 text-slate-700 dark:text-slate-300 shadow-sm group-hover:shadow-brand-teal/30">
                 <cat.icon size={28} strokeWidth={1.5} />
               </div>
-              <h3 className="font-bold text-slate-900 dark:text-white mb-1">{cat.label}</h3>
-              <p className="text-xs text-slate-500 dark:text-slate-400 group-hover:text-brand-teal transition-colors">120+ Courses</p>
+              <h3 className="font-bold text-slate-900 dark:text-white mb-1 group-hover:text-brand-teal transition-colors">{cat.label}</h3>
+              <p className="text-xs text-slate-500 dark:text-slate-400">120+ Courses</p>
             </div>
           ))}
         </div>
