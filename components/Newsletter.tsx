@@ -47,7 +47,7 @@ const Newsletter: React.FC = () => {
                   />
                   <button
                     type="submit"
-                    className="px-8 py-4 rounded-xl bg-brand-teal text-white font-bold hover:bg-teal-500 transition-colors shadow-lg shadow-teal-500/20 flex items-center justify-center gap-2 group whitespace-nowrap"
+                    className="px-8 py-4 rounded-xl bg-brand-teal text-white font-bold hover:bg-teal-500 transition-all duration-300 shadow-lg shadow-teal-500/20 hover:shadow-teal-500/40 hover:-translate-y-0.5 flex items-center justify-center gap-2 group whitespace-nowrap ring-4 ring-transparent hover:ring-brand-teal/20"
                   >
                     Subscribe
                     <Send size={18} className="group-hover:translate-x-1 transition-transform" />

@@ -130,7 +130,7 @@ const Navbar: React.FC<NavbarProps> = ({ onOpenAuth, onNavigate, currentPage, is
                   </button>
                   <button
                     onClick={() => onOpenAuth('signup')}
-                    className="group flex items-center gap-2 px-5 py-2.5 rounded-full bg-brand-teal text-white text-sm font-bold shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40 hover:-translate-y-0.5 transition-all duration-300"
+                    className="group flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-teal text-white text-sm font-bold shadow-lg shadow-teal-500/25 hover:shadow-teal-500/40 hover:-translate-y-0.5 transition-all duration-300 ring-4 ring-transparent hover:ring-brand-teal/20"
                   >
                     Get Started
                     <ChevronRight size={16} className="group-hover:translate-x-0.5 transition-transform" />

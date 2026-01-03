@@ -45,8 +45,8 @@ const Categories: React.FC = () => {
           ))}
         </div>
 
-        <button className="md:hidden w-full mt-8 py-3 rounded-xl border border-slate-200 dark:border-slate-800 font-semibold text-slate-700 dark:text-slate-300 flex items-center justify-center gap-2">
-          View All Categories <ArrowRight size={18} />
+        <button className="md:hidden w-full mt-8 py-4 rounded-2xl bg-slate-900 dark:bg-slate-800 text-white font-bold text-lg hover:shadow-xl hover:bg-slate-800 dark:hover:bg-slate-700 transition-all duration-300 flex items-center justify-center gap-2 group ring-4 ring-transparent active:ring-slate-200 dark:active:ring-slate-700">
+          View All Categories <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
         </button>
       </div>
     </section>
